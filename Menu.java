@@ -1,15 +1,18 @@
-
 package sysacad;
 
 import javax.swing.JOptionPane;
 
 public class Menu {
-    public static void main(String[] args) {   
+    public void menu(){    
     String ver_menu = "";    
     int opcion = 0;
+    Bienvenida saludo = new Bienvenida();
+    RegistroAlumno registro = new RegistroAlumno();
     
     String menu [] = new String [] {"\n1-Materias del plan\n2-Estado académico\n3-Exámenes\n4-Correlatividad para cursar\n5-Correlatividad para rendir\n6-Avisos\n7-Salir\n"};                      
-      
+    saludo.Bienvenida();
+    registro.registro();
+    
     for(int i = 0;i < 7;i++){            
         ver_menu += menu[i];
         JOptionPane.showMessageDialog(null,"-----Menú-----"+ "\n" + ver_menu);            
@@ -109,15 +112,10 @@ public class Menu {
             opcion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese una Opción: "));
             }    
             else{
-            JOptionPane.showMessageDialog(null,"Gracias por Utiliza Sysacad!!!");
+            JOptionPane.showMessageDialog(null,"Gracias por Utilizar Sysacad!!!");
             break;
         }          
       }
     }       
   }   
 }
-                    
-    
-        
-    
-     
