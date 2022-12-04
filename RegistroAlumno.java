@@ -1,28 +1,14 @@
-
 package sysacad;
 
+import javax.swing.JOptionPane;
+
 public class RegistroAlumno {
-    private int legajo, contraseña;
+    int legajo, contraseña;
     
     public void registro() {
-        this.legajo = legajo;
-        this.contraseña = contraseña;
+        JOptionPane.showMessageDialog(null,"-----Registro de alumno-----\n" + "\nIngrese Legajo: \n");
+        JOptionPane.showInputDialog(legajo);                                                  
+        JOptionPane.showMessageDialog(null, "\nIngrese contraseña: \n");
+        JOptionPane.showInputDialog(contraseña);        
     }
-
-    public int getLegajo() {
-        return legajo;
-    }
-
-    public void setLegajo(int legajo) {
-        this.legajo = legajo;
-    }
-
-    public int getContraseña() {
-        return contraseña;
-    }
-
-    public void setContraseña(int contraseña) {
-        this.contraseña = contraseña;
-    }
-    
-}
+}  
